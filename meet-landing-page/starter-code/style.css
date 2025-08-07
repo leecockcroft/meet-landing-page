@@ -1,0 +1,364 @@
+
+:root{
+--slate900:#28283D;
+--slate600:#87879D;
+--slate300:#D1D1DF;
+--purle600:#855fb1;
+--purple300:#D9B8FF;
+--cyan600:#4D96A9;
+--cyan300:#8FE3F9;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+.logo{
+        width: 38%;
+        padding:2em;
+    
+}
+
+img{
+    width:100%;
+}
+
+body{
+    font-size:62.5%;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 2fr;
+    row-gap: 2em;
+    place-items: center;
+        margin-bottom: 17em;
+
+}
+
+.background-desktop-left,.background-desktop-right{
+
+display:none
+}
+.main-text{
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-text p{
+            text-align: center;
+    font-size: 1.4em;
+    color: var(--slate600);
+    font-weight: 500;
+}
+
+.main-text h1{
+
+     font-size: 5em;
+    text-align: center;
+    line-height: 1.1em;
+    margin-bottom: 0.7em;
+}
+
+button{
+ color: #fff;
+    font-weight: 800;
+    border: none;
+    padding: 1.4em;
+    border-radius: 4em;
+        margin: 0.4em;
+}
+
+
+.download {
+
+    background: var(--cyan600);
+    
+    width: 13em;
+   
+
+}
+
+.whatisit{
+        background: var(--purle600);
+    
+    width: 11em;
+
+  
+    
+    font-weight: 800;
+}
+
+.numberline{
+        position: relative;
+    
+  position: relative;
+    color:#000;
+    font-size: 3em;
+    z-index:2;
+
+
+   
+
+}
+
+
+.numberline::before{
+        content: "";
+    position: absolute;
+    top: -4.5em;
+        left: 16.6px;
+    width: 0.05em;
+    height: 4em;
+    background: var(--slate300);
+    color: var(--slate900);
+    font-weight: 600;
+     
+    z-index: -1;
+
+  
+}
+
+.numberline::after{
+
+        content: "";
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid var(--slate300);
+    position: Absolute;
+    border-radius: 50%;
+        top: -0.5em;
+    left: -0.7em;
+    background:#fff;
+     z-index: -1;
+    
+
+
+}
+section{
+    padding:2em;
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-one{
+        padding-bottom: 14em;
+}
+
+.image-wrapper{
+
+       display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 2em;
+    margin-bottom: 4em;
+    margin-top: 10em;
+}
+
+.image-wrapper img {
+        width: 45%;
+   
+    border-radius: 1em;
+}
+
+
+.green-header{
+
+        color: var(--cyan600);
+    font-size: 1.8em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+        padding-bottom: 1em;
+}
+
+
+
+
+.smarterMeeting{
+
+    color: var(--slate900);
+    font-size: 3.1em;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.section-one p {
+    text-align: center;
+    font-size: 1.7em;
+    letter-spacing: 0.1em;
+    padding-top: 2em;
+    color: var(--slate600);
+    font-weight: 600;
+        padding-bottom: 3em;
+}
+
+.button-wrapper{
+       display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-two{
+        background: var(--cyan600);
+            padding: 6em 2em;
+                color: #fff;
+                 text-align: center;
+}
+
+.section-two .numberline {
+      top: -2.6em;
+    
+      color:#000
+}
+
+.section-two h2{
+        font-size: 3.3em;
+   
+    color:#fff;
+}
+
+.section-two h3{
+        font-size: 1.7em;
+    font-weight: 500;
+    /* color: var(--cyan600); */
+    padding-top: 2em;
+}
+
+.section-two .download{
+        background: var(--purle600);
+        margin-top:2em;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    position:relative
+}
+
+@media screen and (min-width: 78em) {
+
+
+
+
+.background-desktop-left,.background-desktop-right{
+    display: block;
+
+
+
+}
+
+
+
+
+.background-mobile{
+    display: none;
+
+}
+
+
+header{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "logo      logo     logo"
+        "leftside  maintext rightside";
+        margin-bottom:30em;
+}
+
+
+.logo{
+    grid-area:logo;
+    width:9%;
+}
+
+.background-desktop-left{
+    grid-area:leftside;
+}
+.background-desktop-right{
+    grid-area:rightside;
+}
+
+.main-text{
+    grid-area:maintext;
+}
+
+.main-text h1{
+    font-size:8em;
+
+}
+
+.main-text p{
+    padding-bottom: 2em;
+    font-size:1.5em;
+}
+
+.button-wrapper{
+      flex-direction:row;
+}
+
+.image-wrapper img{
+        width:20%;
+}
+
+.section-one{
+     width:80%;
+}
+
+section{
+   
+    margin:auto;
+}
+
+.section-two {
+    flex-direction:row;
+    text-align:left;
+}
+
+
+.section-two h3 {
+        width: 23em;
+}
+
+.container{
+    flex-direction:row;
+    width:80%;
+    justify-content: space-between;
+            align-items: center;
+}
+
+.numberline{
+    position:absolute;
+    left:50%;
+}
+
+.section-one .numberline{
+                top: 29em;
+        font-size: 2.5em;
+
+
+
+
+}
+
+.smarterMeeting {
+  
+    font-size: 5.1em;
+   
+
+    width: 38%;
+}
+
+.section-one p{
+        width: 50%;
+}
+
+}
